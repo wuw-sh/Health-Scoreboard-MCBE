@@ -1,0 +1,45 @@
+{
+  "format_version": 2,
+  "metadata": {
+    "authors": [
+      "wuw.sh"
+    ],
+    "url": "https://github.com/wuw-sh",
+    "license": "MIT"
+  },
+  "header": {
+    "name": "Health Scoreboard (Be)",
+    "description": "By §b@§ewuw.sh",
+    "min_engine_version": [
+      1,
+      20,
+      0
+    ],
+    "uuid": "a28f0c12-fca5-4d51-8e12-1b679c3ab140",
+    "version": [
+      1,
+      0,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "script",
+      "description": "@minecraft/server | @minecraft/server-ui",
+      "language": "javascript",
+      "uuid": "98226d9b-5647-4a07-ba69-283e1f61ba40",
+      "entry": "scripts/server/index.js",
+      "version": [
+        1,
+        3,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.3.0-beta"
+    }
+  ]
+}
