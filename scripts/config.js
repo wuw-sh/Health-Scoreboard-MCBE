@@ -2,7 +2,7 @@ export const config = {
     scoreboards: [
         {
             objectiveId: "hp",
-            displayName: "Players Haealth"
+            displayName: "Players Health"
         },
         // {
         //     objectiveId: "health",
