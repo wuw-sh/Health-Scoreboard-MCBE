@@ -6,7 +6,9 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./src",
     "rootDir": "./src",
-    "outDir": "./scripts"
+    "outDir": "./scripts",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
   },
   "exclude": [ "node_modules" ],
   "include": [ "src" ]
