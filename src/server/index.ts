@@ -10,16 +10,12 @@ const players_health: () => {
     }
 });
 
-(async () => {
-    const scoreboards = (await import('config')).config
-
-    server.system.runInterval(() => {
-        for (const scoreboard of scoreboards.scoreboards) {
-            const scoreObj = server.world.scoreboard.getObjective(scoreboard.objectiveId)
-            if (!scoreObj) server.world.scoreboard.addObjective(scoreboard.objectiveId, scoreboard.displayName)
-            for (const data of players_health()) {
-                server.world.getPlayers({ name: data.playerName })[0].runCommandAsync(`scoreboard players set "${data.playerName}" "${scoreboard.objectiveId}" ${data.health}`)
-            }
+server.system.runInterval(async () => {
+    for (const scoreboard of (await import('config')).config.scoreboards) {
+        const scoreObj = server.world.scoreboard.getObjective(scoreboard.objectiveId)
+        if (!scoreObj) server.world.scoreboard.addObjective(scoreboard.objectiveId, scoreboard.displayName)
+        for (const data of players_health()) {
+            server.world.getPlayers({ name: data.playerName })[0].runCommandAsync(`scoreboard players set "${data.playerName}" "${scoreboard.objectiveId}" ${data.health}`)
         }
-    }, 1)
-})()
+    }
+}, 1)
