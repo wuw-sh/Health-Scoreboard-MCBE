@@ -15,7 +15,7 @@ server.system.runInterval(async () => {
         const scoreObj = server.world.scoreboard.getObjective(scoreboard.objectiveId)
         if (!scoreObj) server.world.scoreboard.addObjective(scoreboard.objectiveId, scoreboard.displayName)
         for (const data of players_health()) {
-            server.world.getPlayers({ name: data.playerName })[0].runCommandAsync(`scoreboard players set "${data.playerName}" "${scoreboard.objectiveId}" ${data.health}`)
+            server.world.scoreboard.getObjective(scoreboard.objectiveId).setScore(data.playerName, data.health)
         }
     }
 }, 1)
