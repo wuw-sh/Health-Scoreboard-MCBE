@@ -2,7 +2,7 @@ import * as server from "@minecraft/server";
 const players_health = () => server.world.getAllPlayers().map(pl => {
     return {
         playerName: pl.name,
-        health: pl.getComponent(server.EntityHealthComponent.componentId).current
+        health: pl.getComponent(server.EntityHealthComponent.componentId).currentValue
     };
 });
 server.system.runInterval(async () => {

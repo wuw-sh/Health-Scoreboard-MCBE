@@ -1,5 +1,5 @@
 @echo off
-call npm i -D @minecraft/server@1.3.0-beta.1.20.0-preview.25
+call npm i @minecraft/server@1.4.0-beta.1.20.10-stable
 
 (
     echo {

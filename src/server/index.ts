@@ -6,7 +6,7 @@ const players_health: () => {
 }[] = () => server.world.getAllPlayers().map(pl => {
     return {
         playerName: pl.name,
-        health: (<server.EntityHealthComponent>pl.getComponent(server.EntityHealthComponent.componentId)).current
+        health: (<server.EntityHealthComponent>pl.getComponent(server.EntityHealthComponent.componentId)).currentValue
     }
 });
 
