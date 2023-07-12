@@ -2,4 +2,4 @@ node_modules/
 package.json
 package-lock.json
 tsconfig.json
-TS-complier.bat
+TS-compiler.bat
